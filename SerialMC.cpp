@@ -66,6 +66,12 @@ void SerialMC::turnOff()
 		
 		if (write(uart0_filestream, &txBuffer, 1)<0)
 			std::cout << "error sending data/n";
+		else
+			std::cout << "motors turned off" << "\n";
+	}
+	else
+	{
+		std::cout << "failed to turn off motors" << "\n";
 	}
 }
 
